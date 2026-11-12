@@ -1,44 +1,21 @@
 
-document.addEventListener("DOMContentLoaded", () => {
+const hintButtons = document.querySelectorAll(".hint-button");
 
-  // Reveal / hide hints
-  const revealButtons = document.querySelectorAll(".reveal-btn");
-
-  revealButtons.forEach((button) => {
+hintButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      const targetId = button.dataset.target;
-      const hint = document.getElementById(targetId);
+        const targetId = button.dataset.target;
+        const hintContent = document.getElementById(targetId);
+        const arrow = button.querySelector(".arrow");
 
-      if (!hint) return;
+        const isOpen = hintContent.classList.contains("show");
 
-      const isHidden = hint.hidden;
-      hint.hidden = !isHidden;
+        // Tutup petunjuk yang sedang dibuka
+        hintContent.classList.toggle("show", !isOpen);
 
-      button.textContent = isHidden ? "Hide hint" : "Reveal hint";
+        // Ubah simbol tombol
+        arrow.textContent = isOpen ? "＋" : "−";
+
+        // Perbarui status aksesibilitas
+        button.setAttribute("aria-expanded", String(!isOpen));
     });
-  });
-
-  // Copy URL button
-  const copyButtons = document.querySelectorAll(".copy-btn");
-
-  copyButtons.forEach((button) => {
-    button.addEventListener("click", async () => {
-      const text = button.dataset.copy;
-
-      try {
-        await navigator.clipboard.writeText(text);
-
-        button.textContent = "Copied!";
-
-        setTimeout(() => {
-          button.textContent = "Copy URL";
-        }, 1800);
-
-      } catch (error) {
-        button.textContent = "Copy failed";
-        console.error("Clipboard error:", error);
-      }
-    });
-  });
-
 });
