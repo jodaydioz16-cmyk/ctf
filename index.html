@@ -1,1 +1,216 @@
 
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hints for SMANSAPA Mini CTF challenges.">
+  <title>CTF Hints | SMANSAPA</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="#" class="brand">
+      <span class="brand-icon">⌘</span>
+      SMANSAPA<span class="accent">CTF</span>
+    </a>
+    <span class="status">● MINI CTF 2026</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">HINT CENTER / 2026</p>
+      <h1>Need a <span>little hint?</span></h1>
+      <p class="hero-desc">
+        Stuck on a challenge? No worries. Start with a small clue,
+        think carefully, and uncover the flag.
+      </p>
+      <div class="hero-line"></div>
+      <p class="hero-note">TWO CHALLENGES. TWO FLAGS. CAN YOU FIND THEM?</p>
+    </section>
+
+    <section class="challenge-list">
+
+      <!-- CHALLENGE 01 -->
+      <article class="challenge-card">
+        <div class="card-top">
+          <div>
+            <p class="challenge-number">CHALLENGE 01</p>
+            <h2>Source Hunter</h2>
+          </div>
+          <span class="category">WEB / EASY</span>
+        </div>
+
+        <p class="description">
+          A website may look ordinary on the surface.
+          But what if there's something hidden behind the page?
+        </p>
+
+        <div class="divider"></div>
+
+        <h3>Hints</h3>
+
+        <div class="hint-item">
+          <span class="hint-number">01</span>
+          <div class="hint-content">
+            <p>Hint 01 — Look beyond the page</p>
+            <button class="reveal-btn" data-target="hint1a">
+              Reveal hint
+            </button>
+            <p class="hint-text" id="hint1a" hidden>
+              Your browser displays the page, but the source code
+              contains more information than what you can normally see.
+            </p>
+          </div>
+        </div>
+
+        <div class="hint-item">
+          <span class="hint-number">02</span>
+          <div class="hint-content">
+            <p>Hint 02 — Inspect the source</p>
+            <button class="reveal-btn" data-target="hint1b">
+              Reveal hint
+            </button>
+            <p class="hint-text" id="hint1b" hidden>
+              Try opening the website's page source. Look for HTML comments.
+            </p>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <h3>How to view source in Chrome</h3>
+        <p class="tutorial-intro">
+          Follow these steps to inspect the website's HTML source code.
+        </p>
+
+        <ol class="steps">
+          <li>
+            <strong>Open Google Chrome</strong>
+            <span>Launch Chrome on your computer.</span>
+          </li>
+          <li>
+            <strong>Enter the special URL</strong>
+            <span>Type <code>view-source:</code> before the website URL.</span>
+          </li>
+          <li>
+            <strong>Open the page source</strong>
+            <span>Press Enter to display the raw HTML document.</span>
+          </li>
+          <li>
+            <strong>Search for comments</strong>
+            <span>Use <kbd>Ctrl</kbd> + <kbd>F</kbd> and look for clues.</span>
+          </li>
+        </ol>
+
+        <div class="url-example">
+          <span>TRY THIS URL</span>
+          <code>view-source:https://exo.sman1pacetmojokerto.sch.id/</code>
+          <button class="copy-btn" data-copy="view-source:https://exo.sman1pacetmojokerto.sch.id/">
+            Copy URL
+          </button>
+        </div>
+
+        <p class="small-note">
+          Remember: HTML comments are not displayed as normal page content.
+          Read the source carefully.
+        </p>
+      </article>
+
+      <!-- CHALLENGE 02 -->
+      <article class="challenge-card">
+        <div class="card-top">
+          <div>
+            <p class="challenge-number">CHALLENGE 02</p>
+            <h2>News in the Noise</h2>
+          </div>
+          <span class="category">CRYPTOGRAPHY / EASY</span>
+        </div>
+
+        <p class="description">
+          A long article, a hidden message, and a cipher waiting to be solved.
+          Can you separate the signal from the noise?
+        </p>
+
+        <div class="divider"></div>
+
+        <h3>Hints</h3>
+
+        <div class="hint-item">
+          <span class="hint-number">01</span>
+          <div class="hint-content">
+            <p>Hint 01 — Find the message</p>
+            <button class="reveal-btn" data-target="hint2a">
+              Reveal hint
+            </button>
+            <p class="hint-text" id="hint2a" hidden>
+              The encrypted text is hidden inside an article on the
+              SMANSAPA Extracurricular website.
+              Look for the news article titled:
+              <strong>
+                Dinamika Komunikasi Digital dan Fenomena Ketidakteraturan
+                Informasi dalam Ekosistem Modern
+              </strong>.
+            </p>
+            <a class="external-link"
+               href="https://exo.sman1pacetmojokerto.sch.id/berita/"
+               target="_blank" rel="noopener noreferrer">
+              Open Extracurricular News ↗
+            </a>
+          </div>
+        </div>
+
+        <div class="hint-item">
+          <span class="hint-number">02</span>
+          <div class="hint-content">
+            <p>Hint 02 — Think historically</p>
+            <button class="reveal-btn" data-target="hint2b">
+              Reveal hint
+            </button>
+            <p class="hint-text" id="hint2b" hidden>
+              The cipher is named after an ancient Roman leader.
+              Think about how letters can be shifted through the alphabet.
+            </p>
+          </div>
+        </div>
+
+        <div class="hint-item">
+          <span class="hint-number">03</span>
+          <div class="hint-content">
+            <p>Hint 03 — The final clue</p>
+            <button class="reveal-btn" data-target="hint2c">
+              Reveal hint
+            </button>
+            <p class="hint-text" id="hint2c" hidden>
+              Try a Caesar Cipher with a shift of 12 positions.
+              Remember to decode the message, not encode it.
+            </p>
+          </div>
+        </div>
+
+        <p class="small-note">
+          Don't rush. Find the encrypted message first, then figure out
+          how the cipher works.
+        </p>
+      </article>
+
+    </section>
+
+    <section class="footer-message">
+      <p class="eyebrow">YOUR NEXT MOVE</p>
+      <h2>Think. Explore. <span>Capture the Flag.</span></h2>
+      <p>
+        A hint can guide you, but the solution is yours to discover.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>SMANSAPA MINI CTF © 2026</p>
+    <p>Built for curious minds.</p>
+  </footer>
+
+</body>
+</html>
