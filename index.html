@@ -2,215 +2,251 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Hints for SMANSAPA Mini CTF challenges.">
-  <title>CTF Hints | SMANSAPA</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portal tantangan CTF SMANSAPA">
+    <title>SMANSAPA CTF | Portal Tantangan</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <header class="navbar">
-    <a href="#" class="brand">
-      <span class="brand-icon">⌘</span>
-      SMANSAPA<span class="accent">CTF</span>
-    </a>
-    <span class="status">● MINI CTF 2026</span>
-  </header>
-
-  <main>
-    <section class="hero">
-      <p class="eyebrow">HINT CENTER / 2026</p>
-      <h1>Need a <span>little hint?</span></h1>
-      <p class="hero-desc">
-        Stuck on a challenge? No worries. Start with a small clue,
-        think carefully, and uncover the flag.
-      </p>
-      <div class="hero-line"></div>
-      <p class="hero-note">TWO CHALLENGES. TWO FLAGS. CAN YOU FIND THEM?</p>
-    </section>
-
-    <section class="challenge-list">
-
-      <!-- CHALLENGE 01 -->
-      <article class="challenge-card">
-        <div class="card-top">
-          <div>
-            <p class="challenge-number">CHALLENGE 01</p>
-            <h2>Source Hunter</h2>
-          </div>
-          <span class="category">WEB / EASY</span>
+    <header class="navbar">
+        <div class="brand">
+            <!-- Ganti file logo dengan logo sekolah milikmu -->
+            <img src="assets/logo-smansapa.png" alt="Logo SMANSAPA" class="school-logo">
+            <div>
+                <h1>SMANSAPA <span>CTF</span></h1>
+                <p>Capture The Flag • Edisi Pelajar</p>
+            </div>
         </div>
+        <div class="status">
+            <span class="status-dot"></span>
+            PORTAL PETUNJUK
+        </div>
+    </header>
 
-        <p class="description">
-          A website may look ordinary on the surface.
-          But what if there's something hidden behind the page?
-        </p>
-
-        <div class="divider"></div>
-
-        <h3>Hints</h3>
-
-        <div class="hint-item">
-          <span class="hint-number">01</span>
-          <div class="hint-content">
-            <p>Hint 01 — Look beyond the page</p>
-            <button class="reveal-btn" data-target="hint1a">
-              Reveal hint
-            </button>
-            <p class="hint-text" id="hint1a" hidden>
-              Your browser displays the page, but the source code
-              contains more information than what you can normally see.
+    <main>
+        <section class="hero">
+            <p class="eyebrow">SELAMAT DATANG, PEMBURU FLAG!</p>
+            <h2>Temukan sesuatu<br><span>yang tersembunyi.</span></h2>
+            <p class="hero-description">
+                Dua tantangan telah disiapkan. Gunakan kemampuan observasi,
+                ketelitian, dan logika untuk menemukan flag yang tersembunyi.
             </p>
-          </div>
-        </div>
+            <a href="#tantangan" class="primary-button">Lihat Tantangan <span>↓</span></a>
+        </section>
 
-        <div class="hint-item">
-          <span class="hint-number">02</span>
-          <div class="hint-content">
-            <p>Hint 02 — Inspect the source</p>
-            <button class="reveal-btn" data-target="hint1b">
-              Reveal hint
-            </button>
-            <p class="hint-text" id="hint1b" hidden>
-              Try opening the website's page source. Look for HTML comments.
+        <section class="rules">
+            <h3>📌 Sebelum Memulai</h3>
+            <ul>
+                <li>Kerjakan tantangan sesuai urutan atau pilih tantangan yang ingin kamu coba.</li>
+                <li>Gunakan hanya petunjuk yang tersedia di halaman ini.</li>
+                <li>Flag adalah teks khusus dengan format yang harus ditemukan secara utuh.</li>
+                <li>Jangan mengubah atau merusak isi website sekolah.</li>
+                <li>Setelah menemukan flag, kirimkan kepada penyelenggara sesuai instruksi yang diberikan.</li>
+            </ul>
+        </section>
+
+        <section id="tantangan" class="challenges">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">DAFTAR MISI</p>
+                    <h2>Tantangan CTF</h2>
+                </div>
+                <span class="challenge-count">02 TANTANGAN</span>
+            </div>
+
+            <!-- CHALLENGE 1 -->
+            <article class="challenge-card">
+                <div class="card-top">
+                    <span class="challenge-number">01</span>
+                    <span class="category">WEB • PEMULA</span>
+                </div>
+
+                <h3>Jejak di Balik Halaman</h3>
+                <p class="challenge-description">
+                    Sebuah halaman website terlihat biasa saja.
+                    Namun, apakah semua informasi benar-benar ditampilkan
+                    kepada pengunjung?
+                </p>
+
+                <div class="challenge-info">
+                    <span>🎯 Kategori: Web Exploration</span>
+                    <span>⭐ Tingkat: Mudah</span>
+                </div>
+
+                <div class="hint-area">
+                    <h4>Petunjuk Tantangan 01</h4>
+
+                    <div class="hint-item">
+                        <button class="hint-button" data-target="hint-1a">
+                            <span>Petunjuk 1</span><span class="arrow">＋</span>
+                        </button>
+                        <div class="hint-content" id="hint-1a">
+                            <p>
+                                Tidak semua informasi dalam sebuah website
+                                dapat dilihat langsung melalui tampilan halaman.
+                                Cobalah periksa bagian di balik tampilannya.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="hint-item">
+                        <button class="hint-button" data-target="hint-1b">
+                            <span>Petunjuk 2</span><span class="arrow">＋</span>
+                        </button>
+                        <div class="hint-content" id="hint-1b">
+                            <p>
+                                Browser memiliki fitur untuk melihat kode sumber
+                                atau struktur HTML dari sebuah halaman website.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="hint-item">
+                        <button class="hint-button" data-target="hint-1c">
+                            <span>Petunjuk 3 — Tutorial Chrome</span><span class="arrow">＋</span>
+                        </button>
+                        <div class="hint-content" id="hint-1c">
+                            <p><strong>Cara pertama: menggunakan view-source:</strong></p>
+                            <ol>
+                                <li>Buka Google Chrome.</li>
+                                <li>Klik kolom alamat website di bagian atas browser.</li>
+                                <li>Tambahkan <code>view-source:</code> sebelum alamat website.</li>
+                                <li>Tekan Enter untuk melihat kode sumber halaman.</li>
+                            </ol>
+
+                            <div class="example-code">
+                                <span>Contoh alamat:</span>
+                                <code>view-source:https://exo.sman1pacetmojokerto.sch.id/</code>
+                            </div>
+
+                            <p><strong>Cara kedua: menggunakan Inspect:</strong></p>
+                            <ol>
+                                <li>Buka halaman utama website Ekstra SMANSAPA.</li>
+                                <li>Klik kanan pada halaman.</li>
+                                <li>Pilih menu <strong>Inspect</strong> atau <strong>Periksa</strong>.</li>
+                                <li>Pilih tab <strong>Elements</strong>.</li>
+                                <li>Periksa struktur HTML dan cari komentar yang tersembunyi.</li>
+                            </ol>
+                            <p class="hint-note">
+                                Catatan: komentar HTML biasanya tidak muncul pada tampilan
+                                halaman, tetapi dapat terlihat dalam kode sumber.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="external-link"
+                   href="https://exo.sman1pacetmojokerto.sch.id/"
+                   target="_blank" rel="noopener noreferrer">
+                    Buka Website Ekstra ↗
+                </a>
+            </article>
+
+            <!-- CHALLENGE 2 -->
+            <article class="challenge-card">
+                <div class="card-top">
+                    <span class="challenge-number">02</span>
+                    <span class="category">KRIPTOGRAFI • PEMULA</span>
+                </div>
+
+                <h3>Pesan di Tengah Berita</h3>
+                <p class="challenge-description">
+                    Sebuah pesan tersembunyi di antara kumpulan teks panjang.
+                    Temukan pesan tersebut dan cari tahu bagaimana cara
+                    membacanya.
+                </p>
+
+                <div class="challenge-info">
+                    <span>🔐 Kategori: Cryptography</span>
+                    <span>⭐ Tingkat: Mudah</span>
+                </div>
+
+                <div class="hint-area">
+                    <h4>Petunjuk Tantangan 02</h4>
+
+                    <div class="hint-item">
+                        <button class="hint-button" data-target="hint-2a">
+                            <span>Petunjuk 1</span><span class="arrow">＋</span>
+                        </button>
+                        <div class="hint-content" id="hint-2a">
+                            <p>
+                                Pesan yang kamu cari tidak berada di halaman utama.
+                                Cobalah buka bagian berita pada website Ekstra SMANSAPA.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="hint-item">
+                        <button class="hint-button" data-target="hint-2b">
+                            <span>Petunjuk 2</span><span class="arrow">＋</span>
+                        </button>
+                        <div class="hint-content" id="hint-2b">
+                            <p>
+                                Perhatikan berita dengan judul:
+                                <strong>“Dinamika Komunikasi Digital dan Fenomena
+                                Ketidakteraturan Informasi dalam Ekosistem Modern”.</strong>
+                                Teks terenkripsi berada di dalam isi berita tersebut.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="hint-item">
+                        <button class="hint-button" data-target="hint-2c">
+                            <span>Petunjuk 3</span><span class="arrow">＋</span>
+                        </button>
+                        <div class="hint-content" id="hint-2c">
+                            <p>
+                                Pesan tersebut menggunakan metode sandi klasik
+                                yang namanya diambil dari seorang tokoh Romawi.
+                                Metode ini bekerja dengan menggeser posisi huruf
+                                dalam alfabet.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="hint-item">
+                        <button class="hint-button" data-target="hint-2d">
+                            <span>Petunjuk 4 — Petunjuk Lanjutan</span><span class="arrow">＋</span>
+                        </button>
+                        <div class="hint-content" id="hint-2d">
+                            <p>
+                                Cobalah bereksperimen dengan pergeseran alfabet
+                                sebanyak <strong>12 posisi</strong> untuk menemukan
+                                pesan aslinya.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="external-link"
+                   href="https://exo.sman1pacetmojokerto.sch.id/berita/baca.php?id=12"
+                   target="_blank" rel="noopener noreferrer">
+                    Buka Berita Tantangan ↗
+                </a>
+            </article>
+        </section>
+
+        <section class="submission">
+            <p class="eyebrow">SUDAH MENEMUKAN SESUATU?</p>
+            <h2>Jangan sampai flag-mu hilang!</h2>
+            <p>
+                Simpan flag yang berhasil kamu temukan dan kirimkan
+                kepada penyelenggara melalui saluran pengumpulan yang
+                telah ditentukan.
             </p>
-          </div>
-        </div>
+        </section>
+    </main>
 
-        <div class="divider"></div>
+    <footer>
+        <p>SMANSAPA CTF • Dibuat untuk belajar, bereksplorasi, dan berkreasi.</p>
+        <p class="footer-small">Gunakan kemampuanmu dengan bijak. Happy Hacking! 🚩</p>
+    </footer>
 
-        <h3>How to view source in Chrome</h3>
-        <p class="tutorial-intro">
-          Follow these steps to inspect the website's HTML source code.
-        </p>
-
-        <ol class="steps">
-          <li>
-            <strong>Open Google Chrome</strong>
-            <span>Launch Chrome on your computer.</span>
-          </li>
-          <li>
-            <strong>Enter the special URL</strong>
-            <span>Type <code>view-source:</code> before the website URL.</span>
-          </li>
-          <li>
-            <strong>Open the page source</strong>
-            <span>Press Enter to display the raw HTML document.</span>
-          </li>
-          <li>
-            <strong>Search for comments</strong>
-            <span>Use <kbd>Ctrl</kbd> + <kbd>F</kbd> and look for clues.</span>
-          </li>
-        </ol>
-
-        <div class="url-example">
-          <span>TRY THIS URL</span>
-          <code>view-source:https://exo.sman1pacetmojokerto.sch.id/</code>
-          <button class="copy-btn" data-copy="view-source:https://exo.sman1pacetmojokerto.sch.id/">
-            Copy URL
-          </button>
-        </div>
-
-        <p class="small-note">
-          Remember: HTML comments are not displayed as normal page content.
-          Read the source carefully.
-        </p>
-      </article>
-
-      <!-- CHALLENGE 02 -->
-      <article class="challenge-card">
-        <div class="card-top">
-          <div>
-            <p class="challenge-number">CHALLENGE 02</p>
-            <h2>News in the Noise</h2>
-          </div>
-          <span class="category">CRYPTOGRAPHY / EASY</span>
-        </div>
-
-        <p class="description">
-          A long article, a hidden message, and a cipher waiting to be solved.
-          Can you separate the signal from the noise?
-        </p>
-
-        <div class="divider"></div>
-
-        <h3>Hints</h3>
-
-        <div class="hint-item">
-          <span class="hint-number">01</span>
-          <div class="hint-content">
-            <p>Hint 01 — Find the message</p>
-            <button class="reveal-btn" data-target="hint2a">
-              Reveal hint
-            </button>
-            <p class="hint-text" id="hint2a" hidden>
-              The encrypted text is hidden inside an article on the
-              SMANSAPA Extracurricular website.
-              Look for the news article titled:
-              <strong>
-                Dinamika Komunikasi Digital dan Fenomena Ketidakteraturan
-                Informasi dalam Ekosistem Modern
-              </strong>.
-            </p>
-            <a class="external-link"
-               href="https://exo.sman1pacetmojokerto.sch.id/berita/"
-               target="_blank" rel="noopener noreferrer">
-              Open Extracurricular News ↗
-            </a>
-          </div>
-        </div>
-
-        <div class="hint-item">
-          <span class="hint-number">02</span>
-          <div class="hint-content">
-            <p>Hint 02 — Think historically</p>
-            <button class="reveal-btn" data-target="hint2b">
-              Reveal hint
-            </button>
-            <p class="hint-text" id="hint2b" hidden>
-              The cipher is named after an ancient Roman leader.
-              Think about how letters can be shifted through the alphabet.
-            </p>
-          </div>
-        </div>
-
-        <div class="hint-item">
-          <span class="hint-number">03</span>
-          <div class="hint-content">
-            <p>Hint 03 — The final clue</p>
-            <button class="reveal-btn" data-target="hint2c">
-              Reveal hint
-            </button>
-            <p class="hint-text" id="hint2c" hidden>
-              Try a Caesar Cipher with a shift of 12 positions.
-              Remember to decode the message, not encode it.
-            </p>
-          </div>
-        </div>
-
-        <p class="small-note">
-          Don't rush. Find the encrypted message first, then figure out
-          how the cipher works.
-        </p>
-      </article>
-
-    </section>
-
-    <section class="footer-message">
-      <p class="eyebrow">YOUR NEXT MOVE</p>
-      <h2>Think. Explore. <span>Capture the Flag.</span></h2>
-      <p>
-        A hint can guide you, but the solution is yours to discover.
-      </p>
-    </section>
-  </main>
-
-  <footer>
-    <p>SMANSAPA MINI CTF © 2026</p>
-    <p>Built for curious minds.</p>
-  </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
