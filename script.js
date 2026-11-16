@@ -28,7 +28,7 @@ flagForm.addEventListener("submit", function (event) {
 
     // GANTI dengan nomor WhatsApp penyelenggara
     // Format: 628xxxxxxxxxx (tanpa +, spasi, atau angka 0 di depan)
-    const nomorWhatsApp = "628XXXXXXXXXX";
+    const nomorWhatsApp = "6281805321525";
 
     const nama = document.getElementById("nama").value.trim();
     const kelas = document.getElementById("kelas").value.trim();
